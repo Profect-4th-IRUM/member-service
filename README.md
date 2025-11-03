@@ -1,3 +1,2 @@
-# mvp-server
-Sprint#1 Monolithic Application Server
 # member-service
+member service
