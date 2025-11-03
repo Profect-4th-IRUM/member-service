@@ -1,8 +1,8 @@
 package com.irum.memberservice.domain.auth.controller;
 
-import com.irum.memberservice.domain.auth.service.AuthService;
 import com.irum.memberservice.domain.auth.dto.request.MemberLoginRequest;
 import com.irum.memberservice.domain.auth.dto.response.MemberLoginResponse;
+import com.irum.memberservice.domain.auth.service.AuthService;
 import com.irum.memberservice.global.util.CookieUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

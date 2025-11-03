@@ -1,12 +1,12 @@
 package com.irum.memberservice.domain.member.service;
 
-import com.irum.memberservice.domain.member.util.MemberValidator;
 import com.irum.memberservice.domain.member.domain.entity.Member;
 import com.irum.memberservice.domain.member.domain.repository.MemberRepository;
 import com.irum.memberservice.domain.member.dto.request.MemberCreateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberInfoUpdateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberPasswordUpdateRequest;
 import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
+import com.irum.memberservice.domain.member.util.MemberValidator;
 import com.irum.memberservice.global.util.MemberUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

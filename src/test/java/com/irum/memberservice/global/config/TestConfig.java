@@ -26,7 +26,6 @@ public class TestConfig {
         return Mockito.mock(AuthService.class);
     }
 
-
     @Bean
     public CookieUtil cookieUtil() {
         return Mockito.mock(CookieUtil.class);
@@ -36,5 +35,4 @@ public class TestConfig {
     public JwtTokenService jwtTokenService() {
         return Mockito.mock(JwtTokenService.class);
     }
-
 }

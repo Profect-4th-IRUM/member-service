@@ -3,9 +3,9 @@ package com.irum.memberservice.global.security;
 import static com.irum.memberservice.global.constants.SecurityConstants.REFRESH_TOKEN_COOKIE_NAME;
 import static com.irum.memberservice.global.constants.SecurityConstants.TOKEN_PREFIX;
 
-import com.irum.memberservice.domain.auth.service.JwtTokenService;
 import com.irum.memberservice.domain.auth.dto.request.AccessTokenDto;
 import com.irum.memberservice.domain.auth.dto.request.RefreshTokenDto;
+import com.irum.memberservice.domain.auth.service.JwtTokenService;
 import com.irum.memberservice.domain.member.domain.entity.Member;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import com.irum.memberservice.domain.member.domain.repository.MemberRepository;

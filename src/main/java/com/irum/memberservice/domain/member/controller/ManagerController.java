@@ -1,11 +1,11 @@
 package com.irum.memberservice.domain.member.controller;
 
-import com.irum.memberservice.domain.member.service.ManagerService;
 import com.irum.memberservice.domain.member.dto.request.MemberCreateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberInfoUpdateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberPasswordUpdateRequest;
 import com.irum.memberservice.domain.member.dto.response.MemberInfoListResponse;
 import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
+import com.irum.memberservice.domain.member.service.ManagerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
