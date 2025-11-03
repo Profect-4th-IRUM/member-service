@@ -13,11 +13,11 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.irum.memberservice.domain.auth.application.service.AuthService;
-import com.irum.memberservice.domain.auth.application.service.JwtTokenService;
-import com.irum.memberservice.domain.auth.presentation.controller.AuthController;
-import com.irum.memberservice.domain.auth.presentation.dto.request.MemberLoginRequest;
-import com.irum.memberservice.domain.auth.presentation.dto.response.MemberLoginResponse;
+import com.irum.memberservice.domain.auth.service.AuthService;
+import com.irum.memberservice.domain.auth.service.JwtTokenService;
+import com.irum.memberservice.domain.auth.controller.AuthController;
+import com.irum.memberservice.domain.auth.dto.request.MemberLoginRequest;
+import com.irum.memberservice.domain.auth.dto.response.MemberLoginResponse;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;

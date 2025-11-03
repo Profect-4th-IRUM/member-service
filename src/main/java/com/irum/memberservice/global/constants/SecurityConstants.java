@@ -1,4 +1,4 @@
-package com.irum.come2us.global.constants;
+package com.irum.memberservice.global.constants;
 
 public final class SecurityConstants {
     public static final String TOKEN_ROLE_NAME = "authority";

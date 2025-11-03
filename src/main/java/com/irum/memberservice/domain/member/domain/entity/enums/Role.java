@@ -1,4 +1,4 @@
-package com.irum.come2us.domain.member.domain.entity.enums;
+package com.irum.memberservice.domain.member.domain.entity.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

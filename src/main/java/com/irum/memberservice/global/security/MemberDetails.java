@@ -1,6 +1,6 @@
-package com.irum.come2us.global.security;
+package com.irum.memberservice.global.security;
 
-import com.irum.come2us.domain.member.domain.entity.enums.Role;
+import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import java.util.Collection;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

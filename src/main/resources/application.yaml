@@ -1,11 +1,10 @@
 spring:
   application:
-    name: come2us
+    name: member-service
   profiles:
     active: local
     include:
       - redis
-      - toss
 logback:
   log-path: ./logs
 

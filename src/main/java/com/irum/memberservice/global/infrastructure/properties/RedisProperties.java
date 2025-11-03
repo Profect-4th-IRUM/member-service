@@ -1,4 +1,4 @@
-package com.irum.come2us.global.infrastructure.properties;
+package com.irum.memberservice.global.infrastructure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

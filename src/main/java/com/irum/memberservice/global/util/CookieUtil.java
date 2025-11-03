@@ -1,6 +1,6 @@
-package com.irum.come2us.global.util;
+package com.irum.memberservice.global.util;
 
-import static com.irum.come2us.global.constants.SecurityConstants.REFRESH_TOKEN_COOKIE_NAME;
+import static com.irum.memberservice.global.constants.SecurityConstants.REFRESH_TOKEN_COOKIE_NAME;
 
 import org.springframework.boot.web.server.Cookie;
 import org.springframework.http.HttpHeaders;

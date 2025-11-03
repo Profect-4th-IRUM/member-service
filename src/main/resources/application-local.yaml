@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${LOCAL_POSTGRESQL_HOST:localhost}:${LOCAL_POSTGRESQL_PORT:5432}/${LOCAL_DB_NAME:come2us}
+    url: jdbc:postgresql://${LOCAL_POSTGRESQL_HOST:localhost}:${LOCAL_POSTGRESQL_PORT:5432}/${LOCAL_DB_NAME:come2us_member}
     username: ${LOCAL_POSTGRESQL_USERNAME:developer}
     password: ${LOCAL_POSTGRESQL_PASSWORD:1234}
     driver-class-name: org.postgresql.Driver

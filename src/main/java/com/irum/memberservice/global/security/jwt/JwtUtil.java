@@ -1,11 +1,11 @@
-package com.irum.come2us.global.security.jwt;
+package com.irum.memberservice.global.security.jwt;
 
-import static com.irum.come2us.global.constants.SecurityConstants.TOKEN_ROLE_NAME;
+import static com.irum.memberservice.global.constants.SecurityConstants.TOKEN_ROLE_NAME;
 
-import com.irum.come2us.domain.auth.presentation.dto.request.AccessTokenDto;
-import com.irum.come2us.domain.auth.presentation.dto.request.RefreshTokenDto;
-import com.irum.come2us.domain.member.domain.entity.enums.Role;
-import com.irum.come2us.global.infrastructure.properties.JwtProperties;
+import com.irum.memberservice.domain.auth.dto.request.AccessTokenDto;
+import com.irum.memberservice.domain.auth.dto.request.RefreshTokenDto;
+import com.irum.memberservice.domain.member.domain.entity.enums.Role;
+import com.irum.memberservice.global.infrastructure.properties.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;

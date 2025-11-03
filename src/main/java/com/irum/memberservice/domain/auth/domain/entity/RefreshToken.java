@@ -1,4 +1,4 @@
-package com.irum.come2us.domain.auth.domain.entity;
+package com.irum.memberservice.domain.auth.domain.entity;
 
 import lombok.Builder;
 import lombok.Getter;

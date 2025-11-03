@@ -8,9 +8,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableFeignClients
 @EnableScheduling
-public class Come2usApplication {
+public class MemberServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Come2usApplication.class, args);
+        SpringApplication.run(MemberServiceApplication.class, args);
     }
 }

@@ -1,19 +1,9 @@
 package com.irum.memberservice.global.config;
 
-import com.irum.memberservice.domain.auth.application.service.AuthService;
-import com.irum.memberservice.domain.auth.application.service.JwtTokenService;
-import com.irum.memberservice.domain.cart.application.service.CartService;
-import com.irum.memberservice.domain.category.application.service.CategoryService;
-import com.irum.memberservice.domain.deliveryaddress.application.service.DeliveryAddressService;
-import com.irum.memberservice.domain.discount.application.service.DiscountService;
-import com.irum.memberservice.domain.member.application.service.ManagerService;
-import com.irum.memberservice.domain.member.application.service.MemberService;
-import com.irum.memberservice.domain.order.application.service.CustomerOrderService;
-import com.irum.memberservice.domain.order.application.service.OwnerOrderService;
-import com.irum.memberservice.domain.order.application.service.SalesService;
-import com.irum.memberservice.domain.product.application.service.ProductImageService;
-import com.irum.memberservice.domain.refund.application.service.RefundService;
-import com.irum.memberservice.domain.review.application.service.ReviewService;
+import com.irum.memberservice.domain.auth.service.AuthService;
+import com.irum.memberservice.domain.auth.service.JwtTokenService;
+import com.irum.memberservice.domain.member.service.ManagerService;
+import com.irum.memberservice.domain.member.service.MemberService;
 import com.irum.memberservice.global.util.CookieUtil;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -36,10 +26,6 @@ public class TestConfig {
         return Mockito.mock(AuthService.class);
     }
 
-    @Bean
-    public DeliveryAddressService deliveryAddressService() {
-        return Mockito.mock(DeliveryAddressService.class);
-    }
 
     @Bean
     public CookieUtil cookieUtil() {
@@ -51,46 +37,4 @@ public class TestConfig {
         return Mockito.mock(JwtTokenService.class);
     }
 
-    @Bean
-    public RefundService refundService() {
-        return Mockito.mock(RefundService.class);
-    }
-
-    @Bean
-    public DiscountService discountService() {
-        return Mockito.mock(DiscountService.class);
-    }
-
-    @Bean
-    public CategoryService categoryService() {
-        return Mockito.mock(CategoryService.class);
-    }
-
-    @Bean
-    public ReviewService reviewService() {
-        return Mockito.mock(ReviewService.class);
-    }
-
-    public CartService cartService() {
-        return Mockito.mock(CartService.class);
-    }
-
-    public OwnerOrderService ownerOrderService() {
-        return Mockito.mock(OwnerOrderService.class);
-    }
-
-    @Bean
-    public CustomerOrderService customerOrderService() {
-        return Mockito.mock(CustomerOrderService.class);
-    }
-
-    @Bean
-    public SalesService salesService() {
-        return Mockito.mock(SalesService.class);
-    }
-
-    @Bean
-    public ProductImageService productImageService() {
-        return Mockito.mock(ProductImageService.class);
-    }
 }

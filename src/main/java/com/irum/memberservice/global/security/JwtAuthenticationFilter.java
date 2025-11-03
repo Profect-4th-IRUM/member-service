@@ -1,17 +1,17 @@
-package com.irum.come2us.global.security;
+package com.irum.memberservice.global.security;
 
-import static com.irum.come2us.global.constants.SecurityConstants.REFRESH_TOKEN_COOKIE_NAME;
-import static com.irum.come2us.global.constants.SecurityConstants.TOKEN_PREFIX;
+import static com.irum.memberservice.global.constants.SecurityConstants.REFRESH_TOKEN_COOKIE_NAME;
+import static com.irum.memberservice.global.constants.SecurityConstants.TOKEN_PREFIX;
 
-import com.irum.come2us.domain.auth.application.service.JwtTokenService;
-import com.irum.come2us.domain.auth.presentation.dto.request.AccessTokenDto;
-import com.irum.come2us.domain.auth.presentation.dto.request.RefreshTokenDto;
-import com.irum.come2us.domain.member.domain.entity.Member;
-import com.irum.come2us.domain.member.domain.entity.enums.Role;
-import com.irum.come2us.domain.member.domain.repository.MemberRepository;
-import com.irum.come2us.global.presentation.advice.exception.CommonException;
-import com.irum.come2us.global.presentation.advice.exception.errorcode.MemberErrorCode;
-import com.irum.come2us.global.util.CookieUtil;
+import com.irum.memberservice.domain.auth.service.JwtTokenService;
+import com.irum.memberservice.domain.auth.dto.request.AccessTokenDto;
+import com.irum.memberservice.domain.auth.dto.request.RefreshTokenDto;
+import com.irum.memberservice.domain.member.domain.entity.Member;
+import com.irum.memberservice.domain.member.domain.entity.enums.Role;
+import com.irum.memberservice.domain.member.domain.repository.MemberRepository;
+import com.irum.memberservice.global.presentation.advice.exception.CommonException;
+import com.irum.memberservice.global.presentation.advice.exception.errorcode.MemberErrorCode;
+import com.irum.memberservice.global.util.CookieUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;

@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.irum'
 version = '0.0.1-SNAPSHOT'
-description = 'come2us'
+description = 'memberservice'
 
 java {
     toolchain {

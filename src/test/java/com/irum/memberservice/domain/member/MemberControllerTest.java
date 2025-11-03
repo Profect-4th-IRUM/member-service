@@ -11,13 +11,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.irum.memberservice.domain.member.application.service.MemberService;
+import com.irum.memberservice.domain.member.service.MemberService;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
-import com.irum.memberservice.domain.member.presentation.controller.MemberController;
-import com.irum.memberservice.domain.member.presentation.dto.request.MemberCreateRequest;
-import com.irum.memberservice.domain.member.presentation.dto.request.MemberInfoUpdateRequest;
-import com.irum.memberservice.domain.member.presentation.dto.request.MemberPasswordUpdateRequest;
-import com.irum.memberservice.domain.member.presentation.dto.response.MemberInfoResponse;
+import com.irum.memberservice.domain.member.controller.MemberController;
+import com.irum.memberservice.domain.member.dto.request.MemberCreateRequest;
+import com.irum.memberservice.domain.member.dto.request.MemberInfoUpdateRequest;
+import com.irum.memberservice.domain.member.dto.request.MemberPasswordUpdateRequest;
+import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
 import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;
 import org.junit.jupiter.api.DisplayName;

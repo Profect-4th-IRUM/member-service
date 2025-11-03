@@ -1,6 +1,6 @@
-package com.irum.come2us.domain.member.domain.repository;
+package com.irum.memberservice.domain.member.domain.repository;
 
-import com.irum.come2us.domain.member.presentation.dto.response.MemberInfoResponse;
+import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
 import java.util.List;
 
 public interface MemberRepositoryCustom {
