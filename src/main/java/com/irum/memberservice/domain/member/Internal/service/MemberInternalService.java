@@ -3,12 +3,11 @@ package com.irum.memberservice.domain.member.Internal.service;
 import com.irum.memberservice.domain.member.util.MemberValidator;
 import com.irum.memberservice.openfeign.dto.request.MemberIdListDto;
 import com.irum.memberservice.openfeign.dto.response.MemberDto;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service
 @Transactional
@@ -22,10 +21,9 @@ public class MemberInternalService {
     }
 
     public List<MemberDto> getMemberList(MemberIdListDto request) {
-        return
-                request.memberIdList().stream()
-                        .map(memberValidator::getMemberById)
-                        .map(MemberDto::from).toList();
-
+        return request.memberIdList().stream()
+                .map(memberValidator::getMemberById)
+                .map(MemberDto::from)
+                .toList();
     }
 }
