@@ -11,6 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.irum.global.advice.exception.CommonException;
 import com.irum.memberservice.domain.member.controller.ManagerController;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import com.irum.memberservice.domain.member.dto.request.MemberCreateRequest;
@@ -21,8 +22,7 @@ import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
 import com.irum.memberservice.domain.member.service.ManagerService;
 import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;
-import com.irum.memberservice.global.presentation.advice.exception.CommonException;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.MemberErrorCode;
+import com.irum.memberservice.global.exception.errorcode.MemberErrorCode;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

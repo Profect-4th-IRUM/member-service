@@ -1,15 +1,13 @@
 package com.irum.memberservice.global.util;
 
+import com.irum.global.advice.exception.CommonException;
+import com.irum.global.context.MemberAuthContext;
 import com.irum.memberservice.domain.member.domain.entity.Member;
 import com.irum.memberservice.domain.member.domain.repository.MemberRepository;
-import com.irum.memberservice.global.presentation.advice.exception.CommonException;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.AuthErrorCode;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.MemberErrorCode;
-import com.irum.memberservice.global.security.MemberDetails;
+import com.irum.memberservice.global.exception.errorcode.AuthErrorCode;
+import com.irum.memberservice.global.exception.errorcode.MemberErrorCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -31,19 +29,6 @@ public class MemberUtil {
     }
 
     private Long getCurrentMemberId() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication.getPrincipal() == null) {
-            throw new CommonException(AuthErrorCode.AUTHENTICATION_NOT_FOUND);
-        }
-        try {
-            MemberDetails memberDetails = (MemberDetails) authentication.getPrincipal();
-            return memberDetails.getUserId();
-        } catch (ClassCastException e) {
-            log.warn(e.getMessage());
-            throw new CommonException(AuthErrorCode.AUTHENTICATION_NOT_FOUND);
-        } catch (Exception e) {
-            log.warn(e.getMessage());
-            throw new CommonException(AuthErrorCode.AUTHENTICATION_NOT_FOUND);
-        }
+        return MemberAuthContext.getMemberId();
     } // 로그인 된 아이디 반환
 }

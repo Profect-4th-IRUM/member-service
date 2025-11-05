@@ -1,10 +1,10 @@
 package com.irum.memberservice.domain.member.domain.entity;
 
+import com.irum.global.advice.exception.CommonException;
+import com.irum.global.domain.BaseTimeEntity;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import com.irum.memberservice.global.constants.RegexConstants;
-import com.irum.memberservice.global.domain.BaseTimeEntity;
-import com.irum.memberservice.global.presentation.advice.exception.CommonException;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.MemberErrorCode;
+import com.irum.memberservice.global.exception.errorcode.MemberErrorCode;
 import jakarta.persistence.*;
 import java.util.regex.Pattern;
 import lombok.AccessLevel;
