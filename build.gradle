@@ -27,8 +27,16 @@ repositories {
     mavenCentral()
     maven {
         name = "GitHubPackages"
-        // 'open-feign-client' 프로젝트에 설정한 URL과 동일
-        url = "https://maven.pkg.github.com/Profect-4th-IRUM"
+        url = "https://maven.pkg.github.com/Profect-4th-IRUM/open-feign-client"
+        credentials {
+
+            username = System.getenv("GIT_USERNAME") ?: project.findProperty("gpr.user")
+            password = System.getenv("GIT_TOKEN") ?: project.findProperty("gpr.key")
+        }
+    }
+    maven {
+        name = "GitHubPackages"
+        url = "https://maven.pkg.github.com/Profect-4th-IRUM/global-module"
         credentials {
 
             username = System.getenv("GIT_USERNAME") ?: project.findProperty("gpr.user")
@@ -104,7 +112,8 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 
     // common module
-    implementation 'com.irum:open-feign-client:0.0.2-SNAPSHOT'
+    implementation 'com.irum:open-feign-client:0.0.3-SNAPSHOT'
+    implementation 'com.irum:global-module:0.0.1-SNAPSHOT'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
