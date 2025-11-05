@@ -1,11 +1,11 @@
 package com.irum.memberservice.domain.member.Internal.controller;
 
 import com.irum.memberservice.domain.member.Internal.service.MemberInternalService;
-import com.irum.memberservice.openfeign.dto.request.MemberIdListDto;
-import com.irum.memberservice.openfeign.dto.response.MemberDto;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import openfeign.member.dto.request.MemberIdListDto;
+import openfeign.member.dto.response.MemberDto;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

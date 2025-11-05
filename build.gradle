@@ -25,6 +25,17 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven {
+        name = "GitHubPackages"
+        // 'open-feign-client' 프로젝트에 설정한 URL과 동일
+        url = "https://maven.pkg.github.com/Profect-4th-IRUM"
+        credentials {
+
+            username = System.getenv("GIT_USERNAME") ?: project.findProperty("gpr.user")
+            password = System.getenv("GIT_TOKEN") ?: project.findProperty("gpr.key")
+        }
+    }
+
 }
 
 def querydslDir = layout.buildDirectory.dir("generated/querydsl")
@@ -91,6 +102,9 @@ dependencies {
 
     // Service-Discovery
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    // common module
+    implementation 'com.irum:open-feign-client:0.0.2-SNAPSHOT'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
