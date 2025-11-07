@@ -113,7 +113,7 @@ dependencies {
 
     // common module
     implementation 'com.irum:open-feign-client:0.0.3-SNAPSHOT'
-    implementation 'com.irum:global-module:0.0.1-SNAPSHOT'
+    implementation 'com.irum:global-module:0.0.2-SNAPSHOT'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
