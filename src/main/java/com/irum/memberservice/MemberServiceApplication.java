@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableFeignClients(basePackages = "openfeign")
-@EnableJpaAuditing
 @EnableDiscoveryClient
 public class MemberServiceApplication {
 
