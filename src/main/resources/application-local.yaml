@@ -21,6 +21,5 @@ spring:
       mode: never
       encoding: UTF-8
 
-file:
-  storage: local
-  upload-dir: ${user.dir}/uploads/
+server:
+  port: ${PORT:8081}

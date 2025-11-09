@@ -1,12 +1,12 @@
 package com.irum.memberservice.domain.member.util;
 
+import com.irum.global.advice.exception.CommonException;
+import com.irum.global.advice.exception.errorcode.GlobalErrorCode;
 import com.irum.memberservice.domain.member.domain.entity.Member;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
 import com.irum.memberservice.domain.member.domain.repository.MemberRepository;
-import com.irum.memberservice.global.presentation.advice.exception.CommonException;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.AuthErrorCode;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.GlobalErrorCode;
-import com.irum.memberservice.global.presentation.advice.exception.errorcode.MemberErrorCode;
+import com.irum.memberservice.global.exception.errorcode.AuthErrorCode;
+import com.irum.memberservice.global.exception.errorcode.MemberErrorCode;
 import com.irum.memberservice.global.security.MemberDetails;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;

@@ -5,7 +5,8 @@ spring:
     active: local
     include:
       - redis
+      - eureka
+      - security
+
 logback:
   log-path: ./logs
-
-
