@@ -2,12 +2,12 @@ package com.irum.memberservice.domain.member.Internal.service;
 
 import com.irum.memberservice.domain.member.domain.entity.Member;
 import com.irum.memberservice.domain.member.util.MemberValidator;
+import com.irum.openfeign.member.dto.request.MemberIdListDto;
+import com.irum.openfeign.member.dto.response.MemberDto;
+import com.irum.openfeign.member.enums.Role;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import openfeign.member.dto.request.MemberIdListDto;
-import openfeign.member.dto.response.MemberDto;
-import openfeign.member.enums.Role;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
