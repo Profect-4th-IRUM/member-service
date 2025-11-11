@@ -18,7 +18,6 @@ import com.irum.memberservice.domain.member.dto.request.MemberInfoUpdateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberPasswordUpdateRequest;
 import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
 import com.irum.memberservice.domain.member.service.MemberService;
-import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,7 +31,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(MemberController.class)
 @AutoConfigureRestDocs
-@Import({SecurityTestConfig.class, TestConfig.class})
+@Import(TestConfig.class)
 public class MemberControllerTest {
     @Autowired private MockMvc mockMvc;
     @Autowired private MemberService memberService;
