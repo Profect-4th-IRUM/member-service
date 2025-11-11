@@ -19,7 +19,6 @@ import com.irum.memberservice.domain.auth.dto.response.MemberLoginResponse;
 import com.irum.memberservice.domain.auth.service.AuthService;
 import com.irum.memberservice.domain.auth.service.JwtTokenService;
 import com.irum.memberservice.domain.member.domain.entity.enums.Role;
-import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;
 import com.irum.memberservice.global.util.CookieUtil;
 import org.junit.jupiter.api.DisplayName;
@@ -35,7 +34,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(AuthController.class)
 @AutoConfigureRestDocs
-@Import({SecurityTestConfig.class, TestConfig.class})
+@Import(TestConfig.class)
 public class AuthControllerTest {
     @Autowired MockMvc mockMvc;
     @Autowired AuthService authService;

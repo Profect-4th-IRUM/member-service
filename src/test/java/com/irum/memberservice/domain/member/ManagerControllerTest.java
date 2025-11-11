@@ -20,7 +20,6 @@ import com.irum.memberservice.domain.member.dto.request.MemberPasswordUpdateRequ
 import com.irum.memberservice.domain.member.dto.response.MemberInfoListResponse;
 import com.irum.memberservice.domain.member.dto.response.MemberInfoResponse;
 import com.irum.memberservice.domain.member.service.ManagerService;
-import com.irum.memberservice.global.config.SecurityTestConfig;
 import com.irum.memberservice.global.config.TestConfig;
 import com.irum.memberservice.global.exception.errorcode.MemberErrorCode;
 import java.util.List;
@@ -36,7 +35,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(ManagerController.class)
 @AutoConfigureRestDocs
-@Import({SecurityTestConfig.class, TestConfig.class})
+@Import(TestConfig.class)
 public class ManagerControllerTest {
     @Autowired private MockMvc mockMvc;
     @Autowired private ManagerService managerService;
