@@ -6,7 +6,12 @@ spring:
     include:
       - redis
       - eureka
+      - datasource
       - security
+      - actuator
+
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
 
 logback:
   log-path: ./logs
