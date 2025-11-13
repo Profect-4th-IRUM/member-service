@@ -2,16 +2,14 @@ spring:
   application:
     name: member-service
   profiles:
-    active: local
-    include:
-      - redis
-      - eureka
-      - datasource
-      - security
-      - actuator
+    group:
+      "local": "local, default-datasource, default-redis, security, eureka, openfeign, actuator"
+      "docker": "docker, default-datasource, default-redis, security, eureka, openfeign, actuator"
+      "prod": "prod, prod-datasource, prod-data-redis, security, eureka, openfeign, actuator"
+    active: "local"
 
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
-
-logback:
-  log-path: ./logs
+#
+#logback:
+#  log-path: ./logs
