@@ -4,17 +4,14 @@ FROM gradle:8.7-jdk21-alpine AS build
 
 ARG GIT_USERNAME
 ARG GIT_TOKEN
-ENV USERNAME=$GIT_USERNAME
-ENV TOKEN=$GIT_TOKEN
 
 WORKDIR /app
 
 COPY build.gradle settings.gradle gradlew ./
 COPY gradle gradle
-RUN ./gradlew dependencies --no-daemon || true
 
 COPY . .
-RUN ./gradlew clean bootJar --no-daemon
+RUN GIT_USERNAME=$GIT_USERNAME GIT_TOKEN=$GIT_TOKEN ./gradlew clean bootJar --no-daemon
 
 FROM eclipse-temurin:21-jre-jammy
 
