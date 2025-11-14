@@ -40,6 +40,9 @@ jobs:
         with:
           registry-type: public
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build, Tag, and push the image to ECR
         id: build-image
         env:
@@ -47,10 +50,12 @@ jobs:
         run: |
           IMAGE_LATEST_TAG=${{ env.ECR_URL }}:latest
           IMAGE_SHA_TAG=${{ env.ECR_URL }}:${{ env.IMAGE_TAG }}
-          DOCKER_BUILDKIT=0 docker build \
+          docker buildx build \
             --build-arg GIT_USERNAME=${{ secrets.GIT_USERNAME }} \
             --build-arg GIT_TOKEN=${{ secrets.GIT_TOKEN }} \
-            -t $IMAGE_LATEST_TAG .
+            -t $IMAGE_LATEST_TAG \
+            --load \
+            .
           docker tag $IMAGE_LATEST_TAG $IMAGE_SHA_TAG
           docker push $IMAGE_LATEST_TAG
           docker push $IMAGE_SHA_TAG
