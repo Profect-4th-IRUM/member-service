@@ -2,6 +2,11 @@
 
 FROM gradle:8.7-jdk21-alpine AS build
 
+ARG GIT_USERNAME
+ARG GIT_TOKEN
+ENV USERNAME=$GIT_USERNAME
+ENV TOKEN=$GIT_TOKEN
+
 WORKDIR /app
 
 COPY build.gradle settings.gradle gradlew ./
