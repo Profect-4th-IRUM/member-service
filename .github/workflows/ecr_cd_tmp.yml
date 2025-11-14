@@ -47,7 +47,7 @@ jobs:
         run: |
           IMAGE_LATEST_TAG=${{ env.ECR_URL }}:latest
           IMAGE_SHA_TAG=${{ env.ECR_URL }}:${{ env.IMAGE_TAG }}
-          docker build \
+          DOCKER_BUILDKIT=0 docker build \
             --build-arg GIT_USERNAME=${{ secrets.GIT_USERNAME }} \
             --build-arg GIT_TOKEN=${{ secrets.GIT_TOKEN }} \
             -t $IMAGE_LATEST_TAG .
