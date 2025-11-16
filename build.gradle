@@ -123,6 +123,9 @@ dependencies {
     implementation 'com.irum:open-feign-client:0.0.4-SNAPSHOT'
     implementation 'com.irum:global-module:0.1.8-SNAPSHOT'
 
+    // Liquibase
+    implementation 'org.liquibase:liquibase-core'
+
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
