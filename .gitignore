@@ -38,5 +38,6 @@ out/
 .env
 .DS_Store
 gradle.properties
+liquibase.properties
 ### logs ###
 /logs
