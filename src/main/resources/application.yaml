@@ -3,9 +3,9 @@ spring:
     name: member-service
   profiles:
     group:
-      "local": "local, default-datasource, default-redis, security, eureka, openfeign, actuator"
-      "docker": "docker, default-datasource, default-redis, security, eureka, openfeign, actuator"
-      "prod": "prod, prod-datasource, prod-data-redis, security, eureka, openfeign, actuator"
+      "local": "local, default-datasource, default-db-management, default-redis, security, eureka, openfeign, actuator"
+      "docker": "docker, default-datasource, default-db-management, default-redis, security, eureka, openfeign, actuator"
+      "prod": "prod, prod-datasource, prod-db-management, prod-data-redis, security, eureka, openfeign, actuator"
     active: "local"
 
   config:
