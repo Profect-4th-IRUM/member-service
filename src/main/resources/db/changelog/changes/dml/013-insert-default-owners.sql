@@ -1,4 +1,4 @@
--- changeset willjsw:insert-data-member-2
+-- changeset willjsw:insert-data-member-3
 -- comment: 기본 판매자 계정 데이터 삽입
 INSERT INTO p_member (
                       member_id,
