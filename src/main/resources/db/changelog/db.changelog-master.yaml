@@ -1,13 +1,13 @@
 databaseChangeLog:
-        - include:
-                file: changes/ddl/001-create-table-member.yaml
-                relativeToChangelogFile: true
-        - include:
-           file: changes/dml/011-insert-default-master.yaml
-           relativeToChangelogFile: true
-        - include:
-           file: changes/dml/012-insert-default-customers.sql
-           relativeToChangelogFile: true
-        - include:
-           file: changes/dml/013-insert-default-owners.sql
-           relativeToChangelogFile: true
+  - include:
+      file: changes/ddl/001-create-table-member.yaml
+      relativeToChangelogFile: true
+  - include:
+     file: changes/dml/011-insert-default-master.yaml
+     relativeToChangelogFile: true
+  - include:
+     file: changes/dml/012-insert-default-customers.sql
+     relativeToChangelogFile: true
+  - include:
+     file: changes/dml/013-insert-default-owners.sql
+     relativeToChangelogFile: true
