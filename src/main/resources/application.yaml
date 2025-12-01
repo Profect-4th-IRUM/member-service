@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: member-service
+  profiles:
+    group:
+      "local": "local, default-datasource, default-db-management, default-redis, security, eureka, openfeign, actuator"
+      "docker": "docker, default-datasource, default-db-management, default-redis, security, eureka, openfeign, actuator"
+      "prod": "prod, prod-datasource, prod-db-management, prod-data-redis, security, eureka, openfeign, actuator"
+    active: ${PROFILE_ACTIVE:local}
+
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+#
+#logback:
+#  log-path: ./logs
