@@ -30,7 +30,7 @@
                         "traceId": "%X{trace_id}",
                         "spanId": "%X{span_id}",
                         "service": "${SERVICE_NAME}",
-                        "env": "${ENV}",
+                        "env": "${ENV}"
                         }
                     </pattern>
                 </pattern>
