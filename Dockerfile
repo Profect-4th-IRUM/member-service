@@ -17,8 +17,6 @@ FROM eclipse-temurin:21-jre-jammy
 
 WORKDIR /app
 
-COPY --from=build /app/build/libs/*SNAPSHOT.jar app.jar
-
 ENV TZ=Asia/Seoul
 
 RUN curl -L \
