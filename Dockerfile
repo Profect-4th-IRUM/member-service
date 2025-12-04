@@ -17,8 +17,6 @@ FROM eclipse-temurin:21-jre-jammy
 
 WORKDIR /app
 
-ENV TZ=Asia/Seoul
-
 RUN curl -L \
   https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar \
   -o /app/opentelemetry-javaagent.jar
