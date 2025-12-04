@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: "eureka"
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
+  instance:
+    prefer-ip-address: false
+    hostname: ${MEMBER_HOSTNAME:member.come2us.local}
+    ip-address: ${MEMBER_HOSTNAME}
+    instance-id: ${MEMBER_HOSTNAME}:${MEMBER_PORT}
+    metadata-map:
+      port: ${MEMBER_PORT}
