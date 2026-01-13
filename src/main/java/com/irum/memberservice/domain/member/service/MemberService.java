@@ -1,6 +1,7 @@
 package com.irum.memberservice.domain.member.service;
 
 import com.irum.memberservice.domain.member.domain.entity.Member;
+import com.irum.memberservice.domain.member.domain.repository.MemberCacheRepository;
 import com.irum.memberservice.domain.member.domain.repository.MemberRepository;
 import com.irum.memberservice.domain.member.dto.request.MemberCreateRequest;
 import com.irum.memberservice.domain.member.dto.request.MemberInfoUpdateRequest;
@@ -21,6 +22,7 @@ public class MemberService {
     private final MemberValidator memberValidator;
     private final MemberUtil memberUtil;
     private final BCryptPasswordEncoder passwordEncoder;
+    private final MemberCacheRepository memberCacheRepository;
 
     public void createCustomer(MemberCreateRequest request) {
         memberValidator.assertEmailIsNotTaken(request.email());
@@ -49,25 +51,29 @@ public class MemberService {
     }
 
     public void changeMemberNameAndContact(MemberInfoUpdateRequest request) {
-        memberValidator.applyValidUpdate(
-                memberUtil.getCurrentMember(), request.name(), request.contact());
+        Member member = memberUtil.getCurrentMember();
+        memberValidator.applyValidUpdate(member, request.name(), request.contact());
+        memberCacheRepository.deleteById(member.getMemberId());
     }
 
     public void changeMemberPassword(MemberPasswordUpdateRequest request) {
         Member member = memberUtil.getCurrentMember();
         memberValidator.validatePassword(request.originalPassword(), request.newPassword(), member);
         member.updatePassword(passwordEncoder.encode(request.newPassword()));
+        memberCacheRepository.deleteById(member.getMemberId());
     } // 추후 BCryptEncoder 사용한 암/복호화 검증 로직 적용 예정
 
     public void changeCustomerRoleToOwner() {
         Member member = memberUtil.getCurrentMember();
         memberValidator.assertMemberIsNotOwner(member);
         member.grantOwner();
+        memberCacheRepository.deleteById(member.getMemberId());
     }
 
     public void withdrawCustomer() {
         Member member = memberUtil.getCurrentMember();
         memberValidator.assertMemberIsCustomer(member);
         memberRepository.delete(member);
+        memberCacheRepository.deleteById(member.getMemberId());
     }
 }

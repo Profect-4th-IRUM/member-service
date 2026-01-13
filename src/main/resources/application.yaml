@@ -13,3 +13,6 @@ spring:
 #
 #logback:
 #  log-path: ./logs
+  data:
+    redis:
+      cache-ttl: 1800
